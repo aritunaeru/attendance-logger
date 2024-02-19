@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Attendance Logger</title>
+</head>
+<body>
+    <h1>Attendance Logger</h1>
+    <input type="text" id="attendeeName" placeholder="Enter your name">
+    <button onclick="logAttendance()">Log Attendance</button><br>
+    <button onclick="clearOldData()">Clear data older than 22 hours</button>
+
+    <div id="attendeeId"></div>
+    <div id="previousEntries"><div id="entries"></div></div>
+    <div id="snackbar"></div>
+    <div id="timeLeft"></div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "attendance-logger",
+  "version": "1.0.0",
+  "description": "Logs attendees' attendance during the day.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.9.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "Xayanide",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}
