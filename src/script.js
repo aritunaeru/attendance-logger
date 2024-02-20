@@ -4,7 +4,7 @@ let previousEntries = [];
 //  fetch data from data.json
 async function fetchData() {
 	try {
-		const response = await fetch('./src/data.json');
+		const response = await fetch('data.json');
 		if (!response.ok) {
 			throw new Error('Failed to fetch data');
 		}
