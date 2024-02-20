@@ -3,20 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+    <link rel="manifest" href="src/site.webmanifest">
     <title>Attendance Logger</title>
 </head>
 <body>
-    <h1>Attendance Logger</h1>
-    <input type="text" id="attendeeName" placeholder="Enter your name">
-    <button onclick="logAttendance()">Log Attendance</button><br>
-    <button onclick="clearOldData()">Clear data older than 22 hours</button>
+    <header>
+        <h1>Attendance Logger</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h3>Search for entries:</h3>
+            <input type="text" id="searchInput" placeholder="Search by ID, Name, Time">
+            <button onclick="searchEntries()">Search</button>
+            <h3>Enter your name:</h3>
+            <input type="text" id="attendeeName" placeholder="Enter your name">
+            <div id="attendeeId"></div>
+            <button onclick="logAttendance()">Log Attendance</button>
+            <button onclick="clearOldData()">Clear Data Older than 22 Hours</button>
+        </div>
 
-    <div id="attendeeId"></div>
-    <div id="previousEntries"><div id="entries"></div></div>
+        <div class="container">
+            <div id="previousEntries">
+                <h2>Previous Entries:</h2>
+                <div id="entries"></div>
+            </div>
+        </div>
+    </main>
+    
     <div id="snackbar"></div>
-    <div id="timeLeft"></div>
-</body>
-<script src="script.js"></script>
 
+    <footer>
+        <p>&copy; 2024 Attendance Logger</p>
+    </footer>
+</body>
+<script src="src/script.js"></script>
 </html>

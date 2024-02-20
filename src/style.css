@@ -1,6 +1,70 @@
 body {
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
 }
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input[type="text"] {
+  width: calc(100% - 80px);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#entries {
+  margin-top: 20px;
+}
+
+#entries {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#prevButton,
+#nextButton {
+  /* Add gap between buttons */
+  margin: 0 5px;
+}
+
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -11,7 +75,8 @@ body {
   padding: 16px;
   position: fixed;
   z-index: 1;
-  bottom: 30px;
+  top: 20px; 
+  right: 20px; 
   font-size: 17px;
 }
 
@@ -21,7 +86,6 @@ body {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-/* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;}
   to {bottom: 30px; opacity: 1;}
@@ -40,4 +104,11 @@ body {
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
