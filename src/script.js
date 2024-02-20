@@ -147,7 +147,6 @@ function renderPaginationControls(entriesDiv) {
 	entriesDiv.appendChild(paginationDiv);
 }
 
-/*
 async function writeData(data) {
 	console.log('Writing data...');
 	try {
@@ -162,23 +161,6 @@ async function writeData(data) {
 		console.error(error);
 	}
 }
-*/
-// temporary code:
-async function writeData(data) {
-	console.log('Writing data...');
-	try {
-		await fetch('data.json', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({ previousEntries: data }, null, 2),
-		});
-	} catch (error) {
-		console.error(error);
-	}
-}
-
 
 async function clearOldData() {
 	const twentyTwoHours = 22 * 60 * 60 * 1000;
